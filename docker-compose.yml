@@ -1,0 +1,11 @@
+services:
+  timestash:
+    build: .
+    image: timestash:latest
+    container_name: timestash
+    ports:
+      - "8080:80"   # change left port to any available port on your Unraid machine
+    restart: unless-stopped
+    labels:
+      - "net.unraid.docker.managed=dockerman"
+      - "net.unraid.docker.icon=https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/angular.png"
