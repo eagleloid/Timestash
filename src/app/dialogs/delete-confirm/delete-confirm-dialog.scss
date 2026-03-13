@@ -1,0 +1,26 @@
+.delete-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 8px !important;
+}
+
+.task-name {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.delete-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.delete-btn {
+  width: 100%;
+}
+
+.cancel-btn {
+  width: 100%;
+}

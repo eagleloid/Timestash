@@ -1,0 +1,30 @@
+.dialog-title {
+  margin-bottom: 0 !important;
+  word-break: break-word;
+}
+
+.latest-ts {
+  margin: 4px 24px 0;
+  font-size: 0.85rem;
+  color: var(--mat-sys-on-surface-variant);
+}
+
+.muted {
+  opacity: 0.5;
+}
+
+.action-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 16px !important;
+}
+
+.timestamp-btn {
+  width: 100%;
+}
+
+.delete-btn {
+  width: 60%;
+  align-self: flex-start;
+}
