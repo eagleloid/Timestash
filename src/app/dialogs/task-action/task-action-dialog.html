@@ -1,0 +1,17 @@
+<h2 mat-dialog-title class="dialog-title">{{ data.task.name }}</h2>
+@if (latestTimestamp) {
+  <p class="latest-ts">{{ latestTimestamp }}</p>
+} @else {
+  <p class="latest-ts muted">No timestamps yet</p>
+}
+<mat-dialog-content class="action-content">
+  <button mat-flat-button class="timestamp-btn" (click)="addTimestamp()">
+    Timestamp
+  </button>
+  <button mat-stroked-button color="warn" class="delete-btn" (click)="openDelete()">
+    Delete
+  </button>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

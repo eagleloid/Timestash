@@ -8,38 +8,8 @@ import { DeleteConfirmDialogComponent, DeleteConfirmResult } from '../delete-con
 @Component({
   selector: 'app-task-action-dialog',
   imports: [MatDialogModule, MatButtonModule],
-  template: `
-    <h2 mat-dialog-title class="dialog-title">{{ data.task.name }}</h2>
-    @if (latestTimestamp) {
-      <p class="latest-ts">{{ latestTimestamp }}</p>
-    } @else {
-      <p class="latest-ts muted">No timestamps yet</p>
-    }
-    <mat-dialog-content class="action-content">
-      <button mat-flat-button class="timestamp-btn" (click)="addTimestamp()">
-        Timestamp
-      </button>
-      <button mat-stroked-button color="warn" class="delete-btn" (click)="openDelete()">
-        Delete
-      </button>
-    </mat-dialog-content>
-    <mat-dialog-actions align="end">
-      <button mat-button mat-dialog-close>Close</button>
-    </mat-dialog-actions>
-  `,
-  styles: [`
-    .dialog-title { margin-bottom: 0 !important; word-break: break-word; }
-    .latest-ts { margin: 4px 24px 0; font-size: 0.85rem; color: var(--mat-sys-on-surface-variant); }
-    .muted { opacity: 0.5; }
-    .action-content {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      padding-top: 16px !important;
-    }
-    .timestamp-btn { width: 100%; }
-    .delete-btn { width: 60%; align-self: flex-start; }
-  `],
+  templateUrl: './task-action-dialog.html',
+  styleUrl: './task-action-dialog.scss',
 })
 export class TaskActionDialogComponent {
   get latestTimestamp(): string | null {
